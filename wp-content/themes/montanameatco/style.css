@@ -237,6 +237,27 @@ body {
 		z-index: 9;
 	}
 	
+
+/*------contact page style------------*/
+
+
+#contact-block {
+	width: 325px;
+	display: inline-block;
+}
+
+#map-frame {
+	float: right;
+	border: 2px solid #111;
+	margin-right: 15px;
+}
+
+
+
+
+/*-----------end contact styles---------*/
+
+	
 	
 	
 #primary {
