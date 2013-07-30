@@ -1,0 +1,80 @@
+<?php
+
+/* Template Name:  Homepage
+
+*/
+
+
+get_header(); ?>
+	<script type="text/javascript">
+	//$(document).ready(function() {
+		function slideSwitch() {
+			var $active = $('#mmco-slider img.active');
+			if($active.length == 0) $active = $('#mmco-slider img.last');
+			var $next = $active.next().length ? $active.next() : $('#mmco-slider img:first')
+			$active.addClass('last-active');
+			$next.css({opacity: 0.0})
+				.addClass('active')
+				.animate({opacity: 1}, 1000, function(){
+					$active.removeClass('active last-active')
+				});
+		}
+		$(function() {
+			setInterval("slideSwitch()", 5000);
+		});
+	//});
+	</script>
+    <div id="mmco-slider">
+    		<img src="<?php echo esc_url(bloginfo('template_url')); ?>/images/slideBurger.jpg" />
+    		<img src="<?php echo esc_url(bloginfo('template_url')); ?>/images/slideCustard.jpg" />
+    		<img src="<?php echo esc_url(bloginfo('template_url')); ?>/images/slideRib.jpg" class="active"/>
+    </div>
+    
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+		<?php if ( have_posts() ) : ?>
+
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', 'page' ); ?>
+			<?php endwhile; ?>
+
+			<?php //twentytwelve_content_nav( 'nav-below' ); ?>
+
+		<?php else : ?>
+
+			<article id="post-0" class="post no-results not-found">
+
+			<?php if ( current_user_can( 'edit_posts' ) ) :
+				// Show a different message to a logged-in user who can add posts.
+			?>
+				<header class="entry-header">
+					<h1 class="entry-title"><?php _e( 'No posts to display', 'twentytwelve' ); ?></h1>
+				</header>
+
+				<div class="entry-content">
+					<p><?php printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'twentytwelve' ), admin_url( 'post-new.php' ) ); ?></p>
+				</div><!-- .entry-content -->
+
+			<?php else :
+				// Show the default message to everyone else.
+			?>
+				<header class="entry-header">
+					<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h1>
+				</header>
+
+				<div class="entry-content">
+					<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'twentytwelve' ); ?></p>
+					<?php get_search_form(); ?>
+				</div><!-- .entry-content -->
+			<?php endif; // end current_user_can() check ?>
+
+			</article><!-- #post-0 -->
+
+		<?php endif; // end have_posts() check ?>
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<?php //get_sidebar(); ?>
+<?php get_footer(); ?>

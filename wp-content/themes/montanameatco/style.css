@@ -1,0 +1,309 @@
+/*
+Theme Name: Montana Meat Co.
+Author: Shane Germann
+Author URI: http://www.shanegermann.com
+Description: Custom Theme for Montana Meat company, built on the twentyTwelve framework
+Version: 1.1
+*/
+
+/* =Notes
+--------------------------------------------------------------
+This stylesheet uses rem values with a pixel fallback. The rem
+values (and line heights) are calculated using two variables:
+
+$rembase:     14;
+$line-height: 24;
+
+---------- Examples
+
+* Use a pixel value with a rem fallback for font-size, padding, margins, etc.
+	padding: 5px 0;
+	padding: 0.357142857rem 0; (5 / $rembase)
+
+* Set a font-size and then set a line-height based on the font-size
+	font-size: 16px
+	font-size: 1.142857143rem; (16 / $rembase)
+	line-height: 1.5; ($line-height / 16)
+
+---------- Vertical spacing
+
+Vertical spacing between most elements should use 24px or 48px
+to maintain vertical rhythm:
+
+.my-new-div {
+	margin: 24px 0;
+	margin: 1.714285714rem 0; ( 24 / $rembase )
+}
+
+---------- Further reading
+
+http://snook.ca/archives/html_and_css/font-size-with-rem
+http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+
+a, p, h1, h2, h3, h4, h5, h6 {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+a {
+	color: #C00;
+}
+
+a:hover {
+	color: #600;
+}
+
+a:visited {
+	color: #633
+}
+
+
+
+
+body {
+	background-color: #111;
+	margin: 0;
+}
+
+#page {
+	
+}
+
+
+
+#blackboard {
+	width: 1200px;
+	/* height: 1023px; */
+	margin: 0 auto;
+	padding: 5px 0 50px 0;
+	display: block;
+	background-image: url('images/chalkback.jpg');
+	background-repeat: repeat-y;
+	/* position: relative; */
+	
+	/* position: fixed;
+	top: 0;
+	width:100%;
+	right: 0%;
+	left: 0%; 
+	z-index: 0; */
+}
+
+
+
+#tophead{
+	width: 100%;
+	display: inline-block;
+}
+
+	#tophead #masthead {
+		float: left;
+		margin-right: 120px;
+	}
+	
+	#tophead #logo {
+		float: right;
+		margin: 15px 5px 0 0;
+	}
+	
+	#animal-nav {
+		display: inline;
+		width: 182px;
+		/*float: right; */
+		margin: 0 15px 0 0;
+	}
+
+	#animal-nav ul {
+		list-style-type: none;
+		background: none;
+		margin-top: 24px;
+	}
+	
+	#animal-nav li {
+		display: inline;
+		margin: 0 35px;
+	}
+
+	#animal-nav img {
+		width: 120px;
+	}
+
+
+#bottom-grass {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+
+#site-navigation {
+	float: left;
+	clear: both;
+	top: 260px;
+	left: 55px;
+	margin-right: 30px;
+	/*background-image: url('images/menuback.png'); */
+	
+}
+
+#site-navigation ul {
+	list-style-type: none;
+	padding-top: 12px;
+	width: 190px;
+}
+
+#site-navigation .sub-menu {
+	display: none;
+}
+
+#site-navigation li {
+	position: relative;
+	text-align: left;
+	height: 51px;
+	margin-bottom: 12px;
+	left: 10px;
+}
+
+	#site-navigation a {
+		text-align: center;
+		display: block;
+		/*font-family: "Arial Black", Gadget, sans-serif;	 */
+		color: #222;
+		text-decoration: none;
+		background-image: url('images/menutag.png');
+		background-repeat: no-repeat;
+		width: 160px;
+		padding: 11px 11px;
+	}
+	
+	#site-navigation a:hover {
+		color: #C00;
+	}
+
+
+
+#main {
+	background-image: url('images/butcherpaper.png');
+	float: left;
+	width: 795px;
+	padding: 0 33px;
+}
+
+#papertop {
+	position: relative;
+	top: -47px;
+	left: -33px;
+}
+
+#paperbottom {
+	position: relative;
+	top: 18px;
+	left: -33px;
+}
+
+
+
+
+
+#mmco-slider {
+	position: relative;
+	margin: auto;
+	width:500px;
+	height: 500px;
+	top: -35px;
+}
+
+	#mmco-slider img {
+		width: 500px;
+		height: 500px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 8;
+		opacity: 0.0;
+	}
+	
+	#mmco-slider img.active {
+		z-index: 10;
+		opacity: 1.0;
+	}
+	
+	#mmco-slider img.last-active {
+		z-index: 9;
+	}
+	
+	
+	
+#primary {
+	margin-top: -40px;
+}
+
+
+footer {
+	clear:both;
+}
+
+
+footer .site-info {
+	color: white;
+	text-align: left;
+	margin: 0 60px 0 200px;
+	padding-top: 20px;
+}
+
+
+footer #footercol-1 {
+	display: inline-block;
+	float: left;
+}
+
+
+footer #footercol-2 {
+	display: inline-block;
+	margin-left: 140px;
+}
+
+
+footer .site-info p {
+	display: inline-block;
+	padding-left: 30px;
+}
+
+
+footer .site-info .bolder {
+	font-weight: bolder;
+}
+
+
+footer #facebookicon {
+	display: inline-block;
+	margin-left: 200px;
+}
+
+
+footer a {
+	color: white;
+}
+
+
+#footercol-2 .bolder {
+	text-decoration: underline;
+}
+
+
+#footerlogo {
+	float: right;
+}
+
+
+
+
+
+
+
+
+
