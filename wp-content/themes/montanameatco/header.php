@@ -20,6 +20,7 @@
 <!--<![endif]-->
 <head>
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+<script type='text/javascript' src="<?php echo esc_url(bloginfo('template_url')); ?>/js/meatco.js"></script>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>

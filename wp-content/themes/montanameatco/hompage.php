@@ -6,24 +6,7 @@
 
 
 get_header(); ?>
-	<script type="text/javascript">
-	//$(document).ready(function() {
-		function slideSwitch() {
-			var $active = $('#mmco-slider img.active');
-			if($active.length == 0) $active = $('#mmco-slider img.last');
-			var $next = $active.next().length ? $active.next() : $('#mmco-slider img:first')
-			$active.addClass('last-active');
-			$next.css({opacity: 0.0})
-				.addClass('active')
-				.animate({opacity: 1}, 1000, function(){
-					$active.removeClass('active last-active')
-				});
-		}
-		$(function() {
-			setInterval("slideSwitch()", 5000);
-		});
-	//});
-	</script>
+	
     <div id="mmco-slider">
     		<img src="<?php echo esc_url(bloginfo('template_url')); ?>/images/slideBurger.jpg" />
     		<img src="<?php echo esc_url(bloginfo('template_url')); ?>/images/slideCustard.jpg" />
