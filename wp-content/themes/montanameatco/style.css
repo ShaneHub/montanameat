@@ -61,6 +61,9 @@ a:visited {
 	color: #633
 }
 
+div {
+	-webkit-margin-collapse:separate;
+}
 
 
 
@@ -102,7 +105,7 @@ body {
 
 	#tophead #masthead {
 		float: left;
-		margin-right: 120px;
+		margin-right: 80px;
 	}
 	
 	#tophead #logo {
@@ -121,6 +124,7 @@ body {
 		list-style-type: none;
 		background: none;
 		margin-top: 24px;
+		display: inline-block;
 	}
 	
 	#animal-nav li {
@@ -213,14 +217,15 @@ body {
 #mmco-slider {
 	position: relative;
 	margin: auto;
-	width:500px;
-	height: 500px;
+	width:760px;
+	height: 226px;
 	top: -35px;
+	background-color: #221;
 }
 
 	#mmco-slider img {
-		width: 500px;
-		height: 500px;
+		width: 740px;
+		height: 206px; 
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -237,9 +242,31 @@ body {
 		z-index: 9;
 	}
 	
+	
+	
+/*-   image styling ------*/
+
+.wp-image-wrap {
+	background-color: #221;
+	margin: 0 10px;
+	display: inline-block;
+	padding: 0;
+}
+
+.retro-border {
+	border: 10px solid#221;
+	border-radius: 40px;
+	-moz-border-radius: 40px;
+	-webkit-border-radius: 40px;
+	margin: 0;
+}
+
+
+
+	
+	
 
 /*------contact page style------------*/
-
 
 #contact-block {
 	width: 325px;
@@ -255,16 +282,18 @@ body {
 
 
 
-/*-----------end contact styles---------*/
-
 	
-	
+/*------page content -------*/
 	
 #primary {
-	margin-top: -40px;
+	margin-top: -60px;
 	min-height: 480px;
 }
 
+
+
+
+/*------ footer styles ------*/
 
 footer {
 	clear:both;
@@ -308,8 +337,17 @@ footer #facebookicon {
 }
 
 
-footer a {
+footer a,
+footer a:visited,
+footer a:active {
 	color: white;
+	text-decoration: none;
+	
+}
+
+
+footer a:hover {
+	color: red;
 }
 
 

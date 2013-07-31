@@ -448,3 +448,13 @@ function twentytwelve_customize_preview_js() {
 	wp_enqueue_script( 'twentytwelve-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20120827', true );
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
+
+
+// adds a div around all images   
+function wp_image_wrap_init( $html, $id, $caption, $title, $align, $url, $size, $alt ) {
+	return '<div id="wp-image-wrap-'. $id .'" class="wp-image-wrap">'. $html .'</div>';
+}
+add_filter( 'image_send_to_editor', 'wp_image_wrap_init', 10, 8 ); 
+
+
+

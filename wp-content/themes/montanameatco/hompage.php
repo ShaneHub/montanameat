@@ -8,12 +8,11 @@
 get_header(); ?>
 	
     <div id="mmco-slider">
-    		<img src="<?php echo esc_url(bloginfo('template_url')); ?>/images/slideBurger.jpg" />
-    		<img src="<?php echo esc_url(bloginfo('template_url')); ?>/images/slideCustard.jpg" />
-    		<img src="<?php echo esc_url(bloginfo('template_url')); ?>/images/slideRib.jpg" class="active"/>
+    		<img src="<?php echo esc_url(bloginfo('template_url')); ?>/images/WardPeak.jpg" class="retro-border" />
+    		<img src="<?php echo esc_url(bloginfo('template_url')); ?>/images/steak.jpg" class="retro-border active" />
     </div>
     
-	<div id="primary" class="site-content">
+	<div id="primary" class="site-content" style="margin-top: -40px">
 		<div id="content" role="main">
 		<?php if ( have_posts() ) : ?>
 

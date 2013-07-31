@@ -37,7 +37,9 @@
 <div id="page" class="hfeed site">
    <div id="blackboard">
    		<div id="tophead">
-        	<a href="<?php echo esc_url(home_url('/')); ?>"><img id="masthead" src="<?php echo esc_url(bloginfo('template_url')); ?>/images/masthead.png" /></a>
+        	<div id="masthead">
+            	<a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(bloginfo('template_url')); ?>/images/masthead.png" /></a>
+            </div>
             <!-- <a href="<?php echo esc_url(home_url('/')); ?>"><img id="logo" src="<?php echo esc_url(bloginfo('template_url')); ?>/images/logo.png" /></a> -->
             
              <div id="animal-nav">
