@@ -221,6 +221,9 @@ body {
 	height: 226px;
 	top: -35px;
 	background-color: #221;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
 }
 
 	#mmco-slider img {
@@ -251,6 +254,9 @@ body {
 	margin: 0 10px;
 	display: inline-block;
 	padding: 0;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
 }
 
 .retro-border {
