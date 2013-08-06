@@ -19,7 +19,7 @@
             	<p><span class="bolder">Montana Meat Company</span><br />
             		104 E. Main Street<br />
                 	Bozeman, MT 59715<br /><br />
-                	415-580-1812
+                	406-580-1812
             	</p>
             </div>
             <div id="footercol-2">
