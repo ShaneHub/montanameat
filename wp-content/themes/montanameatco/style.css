@@ -49,6 +49,10 @@ a, p, h1, h2, h3, h4, h5, h6, label {
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
+a img {
+	border: 0;
+}
+
 input, textarea {
 	padding: 6px 4px;
 	font-size: .8em;
@@ -150,7 +154,7 @@ body {
 	}
 	
 	#animal-nav a {
-		border: none; /* hack for IE */
+		border: 0; /* hack for IE */
 		opacity: 1;
 	}
 	
@@ -159,6 +163,7 @@ body {
 	}
 
 	#animal-nav img {
+		border: 0;
 		width: 120px;
 	}
 
@@ -304,7 +309,7 @@ body {
 }
 
 .retro-border {
-	border: 10px solid#221;
+	border: 10px solid #221;
 	border-radius: 40px;
 	-moz-border-radius: 40px;
 	-webkit-border-radius: 40px;
