@@ -45,7 +45,7 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
 -------------------------------------------------------------- */
 
 
-a, p, h1, h2, h3, h4, h5, h6, label {
+a, p, h1, h2, h3, h4, h5, h6, li, label {
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
@@ -354,6 +354,8 @@ form.commentsblock {
 
 .contact-form input[type=submit] {
 	width: 200px;
+	box-shadow: 1px 1px 7px #d55;
+	cursor:pointer;
 }
 
 
